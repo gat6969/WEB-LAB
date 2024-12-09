@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Colors Stacking</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .red {
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            z-index: 0;
+        }
+
+        .yellow {
+            position: absolute;
+            left: 30%;
+            top: 30%;
+            z-index: 1;
+        }
+
+        .green {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 2;
+        }
+    </style>
+    <script>
+        var topindex = 2; // Starting index, green has the highest z-index
+
+        function moveToTop(picture) {
+            picture.style.zIndex = ++topindex; // Increment the z-index on hover
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Overlapping Images</h1>
+    <div id="image-container">
+        <img id="yellow" class="yellow"
+            src="https://img.freepik.com/free-photo/artistic-blurry-colorful-wallpaper-background_58702-8497.jpg?semt=ais_hybrid"
+            onmouseover="moveToTop(this)" width="400" height="300" />
+        <img class="red"
+            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAlAMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAABAAIEBv/EABgQAQEBAQEAAAAAAAAAAAAAAAABETFB/8QAGgEBAQEBAQEBAAAAAAAAAAAAAQACBAMHBf/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8A8sUn5D7EEUEEUAyGggGcaADKpwVM1mqkIAUioAUihmhJDFrtRUejo1JIIIhIIgABqsoCgqpmsstBaBWWhVoZZrYoZrKKQdpBbdKSQCBQIBCAow0VAM2tVmgBEIM0GhMgEJmjEkmXckmnSkikFEglQagWaKRUBWbGqKEyDQmaKy1RUzWRWmamKEUmXakW3SkiEEaEgkGSBTQlgBooTNBoLNFBoTFAIqYoSoTLuMSadJxKKoIVaKCgQyRQaERRTRUKGTqqZZoITNAIqedAITLuITbpanENSqOspMoKoAipAFUVVAVmg0FmgFmlhUVUVMVBJMu5BNuppBKhAislBCgoGshKioVYEKh6mUyRUyBTWS86KRUmXcgXo60khQgqmSglQgKRUBotQoCFQTKZNBZoopFTFCCTLuST0daSQqQqQSFSAASAZSQAoqSZFARZovAkmKEkmX//2Q=="
+            width="400" height="300" />
+        <img class="green"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMUAAACUCAMAAAAUNB2QAAAAA1BMVEUA7gBnh+O4AAAAM0lEQVR4nO3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4NHJ4AAF0e6e2AAAAAElFTkSuQmCC"
+            width="400" height="300" />
+    </div>
+</body>
+
+</html>

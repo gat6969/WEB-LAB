@@ -1,0 +1,76 @@
+Lab 5:
+Develop a student registration form that includes <br>
+a. Include Fields for subject preferences (Web, Java, Python).<br>
+b. option to upload photo and dropdoqn list for payment method<br>
+c. Include a submit button to process the registration
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Registration Form</title>
+    <style>
+        div {
+            background-color: hotpink;
+            width: auto;
+            padding: 20px;
+            margin: 20 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+            border-radius: 22px;
+        }
+
+        label {
+            display: inline-block;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Student Registration Form (CSE-AIML)</h1>
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="Enter your name" required><br><br>
+        <label for ="number">USN No:</label>
+        <input type="number" name="number" placeholder="Enter your USN No." required><br><br>
+        <label for="email" name="email">Email ID:</label>
+        <input type="email" name="email" placeholder="Enter your Email" required><br>
+        <label for="gender">
+            <h3>Gender:</h3>
+        </label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="male">Female<br>
+        <label for="subject">Subject Preference</label>
+        <input type="checkbox">Web Technologies
+        <input type="checkbox">Java
+        <input type="checkbox">Python<br>
+        <label for="upload" name="file">
+            <h3>Upload your resume here:</h3>
+        </label>
+
+        <input type="file" name="file" accept="image/*" required> <br>
+        <label for="Payment">
+            <h3>Preferred Payment Method:</h3>
+        </label>
+        <select name="payment" id="payment">
+            <option value="PaytM">None</option>
+            <option value="GooglePay">GooglePay</option>
+            <option value="PhonePay">PhonePay</option>
+            <option value="RazorPay">PaytM</option>
+        </select>
+        <br>
+        <div class="form-group" style="text-align: center;">
+
+            <input type="submit">
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<style>
+    .head{
+        background-color: aqua;
+        color: rgb(6, 58, 40);
+        
+    }
+    .card{
+        margin-bottom: 50px;
+    }
+    #About{ 
+        color: rgb(0, 0, 0);
+
+    }
+</style>
+
+</head>
+<body>
+    <header class="text-center">
+    <h1 class="head"> ARRK </h1>
+    <p>WEB DEVELOPER | GRAPHIC DESIGINER </p>
+    <ul
+        class="nav justify-content-center  "
+    >
+        <li class="nav-item">
+            <a class="nav-link active" href="#Home" aria-current="page"
+                >Home |</a
+            >
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#About">About  |</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#Skills">Skills |</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#Project">Project</a>
+        </li>
+  
+    </ul>
+    
+</header>
+</body>
+<section id="About" class="text-center">
+    <h2>About Me</h2>
+    <p> I'm Arrk Raj, a passionate Python and web developer dedicated to building efficient, user-friendly applications. I thrive on turning ideas into functional, dynamic digital solutions.</p>
+
+</section>
+<section id="Skills" class="text-center">
+    <h2>Skills</h2>
+  <div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">HTML</h3>
+                <p class="card-text"> A web developer with expertise in HTML, creating structured and accessible web content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">CSS</h3>
+                <p class="card-text">I specialize in CSS, crafting visually appealing and responsive web designs that enhance user experience</p>
+            </div>
+        </div>
+    </div>  
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">PYTHON</h3>
+                <p class="card-text">As a Python developer, I build powerful, scalable applications and solutions to solve complex problems.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+</section>
+<section id="Project" class="text-center">
+    <h2>Project</h2>
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Calculator</h3>
+                    
+                    <img src="calcy.jpg"alt="calculator" width="170">
+                    <p class="card-text">I built a simple Calculator app in Python that performs basic arithmetic operations with an interactive command-line interface.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Task Management App</h3>
+                
+                    <img src="weather.jpg"alt="weather app" width="50%">
+                    <p class="card-text">I developed a Weather App using HTML, CSS, and JavaScript to fetch and display real-time weather information based on user input</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</section>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 33%;
+            text-align: center;
+            background-color: hotpink;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        input {
+            text-align: right;
+        }
+    </style>
+    <script type="text/javascript">
+        function calc(clicked_id) {
+            var value1 = parseFloat(document.getElementById("value1").value);
+            var value2 = parseFloat(document.getElementById("value2").value);
+            if (isNaN(value1) || isNaN(value2)) {
+                alert("ENTER VALUE NUMBER");
+            } else if (clicked_id == "add") {
+                document.getElementById("answer").value = value1 + value2;
+            } else if (clicked_id == "sub") {
+                document.getElementById("answer").value = value1 - value2;
+            } else if (clicked_id == "mul") {
+                document.getElementById("answer").value = value1 * value2;
+            } else if (clicked_id == "div") {
+                document.getElementById("answer").value = value1 / value2;
+            }
+        }
+
+        function cls() {
+            document.getElementById("value1").value = "0";
+            document.getElementById("value2").value = "0";
+            document.getElementById("answer").value = "";
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th colspan="4">SIMPLE Calculator</th>
+        </tr>
+        <tr>
+            <td>Value 1</td>
+            <td><input type="text" id="value1" value="0" /></td>
+            <td>Value 2</td>
+            <td><input type="text" id="value2" value="0" /></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="add" value="Addition" onclick="calc(this.id)" /></td>
+            <td><input type="button" id="sub" value="Subtraction" onclick="calc(this.id)" /></td>
+            <td><input type="button" id="mul" value="Multiplication" onclick="calc(this.id)" /></td>
+            <td><input type="button" id="div" value="Division" onclick="calc(this.id)" /></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="answer" value="" /></td>
+            <td colspan="2"><input type="button" value="Clear" onclick="cls()" /></td>
+        </tr>
+    </table>
+</body>
+
+</html
